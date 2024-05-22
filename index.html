@@ -1,56 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunflower</title>
+    <title>Página de Amor</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="sunflower">
-        <div class="flower_wrapper">
-            <div class="flower_stem"></div>
-            <div class="flower_center"></div>
-            <div class="flower_petal flower_petal-1"></div>
-            <div class="flower_petal flower_petal-2"></div>
-            <div class="flower_petal flower_petal-3"></div>
-            <div class="flower_petal flower_petal-4"></div>
-            <div class="flower_petal flower_petal-5"></div>
-            <div class="flower_petal flower_petal-6"></div>
-            <div class="flower_petal flower_petal-7"></div>
-            <div class="flower_petal flower_petal-8"></div>
-            <div class="flower_petal flower_petal-9"></div>
-            <div class="flower_petal flower_petal-10"></div>
-            <div class="flower_petal flower_petal-11"></div>
-            <div class="flower_petal flower_petal-12"></div>
-
-            <div class="flower_leaf flower_leaf-1"></div>
-            <div class="flower_leaf flower_leaf-2"></div>
-
-            <div class="flower_light flower_light-1"></div>
-            <div class="flower_light flower_light-2"></div>
-            <div class="flower_light flower_light-3"></div>
-            <div class="flower_light flower_light-4"></div>
-            <div class="flower_light flower_light-5"></div>
-            <div class="flower_light flower_light-6"></div>
-            <div class="flower_light flower_light-7"></div>
-            <div class="flower_light flower_light-8"></div>
+    <div class="container">
+        <div class="button-wrapper">
+            <div class="loading-heart-container" id="loadingHeartContainer">
+                <svg class="loading-heart" viewBox="0 0 24 24">
+                    <path class="border" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="none" stroke="red" stroke-width="2"/>
+                    <path class="fill" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+            </div>
         </div>
+        <div class="message" id="floatingMessage">Feliz 2 años, mi amorcito</div>
     </div>
-
-    <div class="light light-1"></div>
-    <div class="light light-2"></div>
-    <div class="light light-3"></div>
-    <div class="light light-4"></div>
-    <div class="light light-5"></div>
-    <div class="light light-6"></div>
-    <div class="light light-7"></div>
-    <div class="light light-8"></div>
-    <div class="light light-9"></div>
-    <div class="light light-10"></div>
-    <div class="light light-11"></div>
-    <div class="light light-12"></div>
-
+    <div class="hearts" id="hearts"></div>
+    <script src="script.js"></script>
 </body>
 </html>
