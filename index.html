@@ -1,71 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cristhian Saico</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tu Nombre · Developer Portfolio</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- D3 -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="container">
-                <h1 class="logo">Cristhian Saico</h1>
-                <ul>
-                    <li><a href="#about">Sobre Mí</a></li>
-                    <li><a href="#projects">Proyectos</a></li>
-                    <li><a href="#contact">Contacto</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
 
-    <section id="about" class="section bg">
-        <div class="container">
-            <h2>Sobre Mí</h2>
-            <p>Hola, soy un developer apasionado por la tecnología y el desarrollo de software. Me especializo en back-end, pero también tengo experiencia en front-end.</p>
-        </div>
-    </section>
+  <!-- Barra de navegación fija -->
+  <header class="navbar">
+    <a href="#home" class="logo">TuNombre.dev</a>
+    <nav>
+      <a href="#about">Sobre mí</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Proyectos</a>
+      <a href="#contact">Contacto</a>
+    </nav>
+  </header>
 
-    <section id="projects" class="section">
-        <div class="container">
-            <h2>Proyectos</h2>
-            <div class="project-cards">
-                <div class="project-card">
-                    <a href="https://docs.google.com/document/d/1pjcQtyLRLxOvtLs8eKSLwB3XqMT8-jZ9/edit" target="_blank" rel="noopener noreferrer"><h3>Plataforma de venta</h3>
-                    <p>Visivilizar emprendimientos de los alumnos de la UNMSM</p></a>
-                </div>
-                <div class="project-card">
-                    <h3>Proyecto 2</h3>
-                    <p>Descripción del proyecto.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Proyecto 3</h3>
-                    <p>Descripción del proyecto.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Sección HERO -->
+  <section id="home" class="section hero">
+    <h1>Hola, soy <span class="accent">Tu Nombre</span></h1>
+    <p class="lead">Desarrollador Front-End · UX · Fan de los datos</p>
+    <a href="#projects" class="btn-cta">Mis proyectos</a>
+  </section>
 
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contacto</h2>
-            <form id="contact-form">
-                <input type="text" id="name" placeholder="Tu Nombre" required>
-                <input type="email" id="email" placeholder="Tu Correo" required>
-                <textarea id="message" placeholder="Tu Mensaje" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-    </section>
+  <!-- Sobre mí -->
+  <section id="about" class="section about">
+    <h2>Sobre mí</h2>
+    <p>
+      He desarrollado proyectos personales y así mismo apoyado en organizaciones estudiantiles en el desarrollo de su páginas web
+    </p>
+  </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Cristhian Daniel Saico Merma</p>
-        </div>
-    </footer>
+  <!-- Skills con D3 -->
+  <section id="skills" class="section skills">
+    <h2>Habilidades</h2>
+    <svg id="skills-chart" aria-describedby="skills-desc"></svg>
+    <p id="skills-desc" class="sr-only">
+      Gráfico de barras mostrando porcentajes de dominio por tecnología.
+    </p>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- Portafolio de proyectos -->
+  <section id="projects" class="section projects">
+    <h2>Proyectos destacados</h2>
+
+    <!-- Filtro (opcional) -->
+    <select id="filter" aria-label="Filtrar por categoría">
+      <option value="all">Todos</option>
+    </select>
+
+    <!-- Grid -->
+    <div id="grid" class="grid"></div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contact" class="section contact">
+    <h2>Contacto</h2>
+    <p>
+      ¿Quieres hablar de un proyecto o solo saludar?  
+      <a href="mailto:tu@email.com">Escríbeme un correo</a>
+      o encuéntrame en
+      <a href="https://linkedin.com/in/tuusuario" target="_blank" rel="noopener">LinkedIn</a>.
+    </p>
+  </section>
+
+  <!-- Pie -->
+  <footer class="footer">
+    © <span id="year"></span> Tu Nombre. Hecho con ♥ y Vanilla JS.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+  <script src="portfolio-data.js"></script>
+  <script src="portfolio.js"></script>
+  <script src="d3-graphs.js"></script>
 </body>
 </html>
-
