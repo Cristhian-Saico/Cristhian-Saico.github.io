@@ -6,7 +6,7 @@ const portfolioData = [
     title: 'Landing Page Agencia X',
     desc: 'Diseño y desarrollo responsive con animaciones sutiles.',
     img: 'assets/landing-agencia.jpg',
-    url: './pagina/index.html',
+    url: 'pagina/nosotros.html',
     category: 'Web'
   },
   {
