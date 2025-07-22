@@ -1,0 +1,256 @@
+<!-- =========================
+  index.html – Nanotecnología aplicada a la salud
+  Presentación fullscreen con navegación por teclado
+  ========================= -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nanotecnología aplicada a la salud – Presentación</title>
+  
+  <!-- Estilos principales -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- D3.js (ESM build) -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/d3@7/+esm"></script>
+</head>
+<body>
+  <main id="slides" tabindex="0"><!-- tabindex permite recibir eventos de teclado en el contenedor -->
+    <!-- =========================
+        0 · CARÁTULA
+    ========================= -->
+    <section class="slide cover center" data-slide="0">
+      <h1>Nanotecnología<br/><span class="thin">aplicada a la salud</span></h1>
+      <p class="subtitle">Revisión visual de tres artículos de investigación (2024‑2025)</p>
+      <p class="author">Cristhian Saico · Julio 2025</p>
+      <p class="hint">Pulsa <kbd>→</kbd> para comenzar</p>
+    </section>
+
+    <!-- =========================
+        1 · INTRO
+    ========================= -->
+    <section class="slide intro center" data-slide="1">
+      <h2>Objetivo de la presentación</h2>
+      <ul>
+        <li>Comprender <strong>conceptos clave</strong> de nanomedicina: vectores LNP‑CRISPR, nanotermoterapia inmunoestimulante y biosensores rGO.</li>
+        <li>Visualizar <strong>resultados experimentales</strong> originales mediante gráficos y figuras de los papers.</li>
+        <li>Resaltar aplicaciones clínicas emergentes y <strong>retos</strong> regulatorios, de manufactura y escalado.</li>
+      </ul>
+      <p class="note">Navega con las flechas &larr; &rarr; · Explora verticalmente con &uarr; &darr; si aparece scroll interno.</p>
+    </section>
+
+    <!-- ==============================================================
+         ARTÍCULO 1 — Nature Biotechnology 2024 (LNP‑CRISPR)
+    ============================================================== -->
+    <!-- 2 · Portada del artículo -->
+    <section class="slide center" data-slide="2">
+      <h2>Artículo 1</h2>
+      <h3>LNP‑CRISPR para edición dual hígado‑pulmón</h3>
+      <p class="journal">Nature Biotechnology (2024) · DOI 10.1038/s41587‑024‑02437‑3</p>
+      <figure>
+        <img src="img/art1_scheme1.jpg" alt="Esquema general de la nanopartícula LNP‑RNP" />
+        <figcaption>Figura 1 del artículo – Formulación y ruta intracelular.</figcaption>
+      </figure>
+    </section>
+
+    <!-- 3 · Contexto y objetivo -->
+    <section class="slide" data-slide="3">
+      <h3>Contexto y objetivo</h3>
+      <ul>
+        <li><strong>Enfoque tradicional:</strong> LNP‑mRNA altamente eficientes en hígado, pero limitados fuera de él.</li>
+        <li><strong>Limitación:</strong> riesgo de integración viral y potencia insuficiente en pulmón.</li>
+        <li><strong>Hipótesis:</strong> LNP que transporten complejos RNP estables + lípido “SORT” para redirigirse.</li>
+        <li><strong>Meta específica:</strong> superar 30 % de edición en ambos órganos tras una sola dosis IV.</li>
+      </ul>
+    </section>
+
+    <!-- 4 · Ingeniería de la herramienta -->
+    <section class="slide" data-slide="4">
+      <h3>Ingeniería de la herramienta</h3>
+      <ol>
+        <li><strong>iGeoCas9 R1W1:</strong> 8 mutaciones → actividad ↑100×, tolerancia PAM ancha.</li>
+        <li><strong>Formulación flash:</strong> micro‑mezcla etanol/ácido → cápsula RNP.</li>
+        <li><strong>SORT‑lipids:</strong> cambiar solo 2 % de la mezcla redirige hígado ⇆ pulmón.</li>
+        <li><strong>Termoestabilidad:</strong> RNP mantiene >90 % actividad a 37 °C durante 72 h.</li>
+      </ol>
+      <figure>
+        <img src="img/art1_sort_lipids.png" alt="Lípidos SORT y destino órgano" />
+      </figure>
+    </section>
+
+    <!-- 5 · Diseño experimental (tabla) -->
+    <section class="slide" data-slide="5">
+      <h3>Diseño experimental in vivo (ratón)</h3>
+      <table>
+        <thead>
+          <tr><th>Modelo</th><th>Guía</th><th>Dosis</th><th>Tejido</th><th>Eficacia</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Ai9 reporter</td><td><em>tdTomato</em></td><td>1 mg kg⁻¹</td><td>Hígado + Pulmón</td><td>Fluorescencia ON (rosa)</td></tr>
+          <tr><td>C57BL/6J</td><td><em>Pcs k9</em></td><td>1 mg kg⁻¹</td><td>Hígado</td><td>37 % edición · LDL ↓50 %</td></tr>
+          <tr><td>WT</td><td><em>Sftpc</em></td><td>1 mg kg⁻¹</td><td>Pulmón</td><td>16 % edición</td></tr>
+        </tbody>
+      </table>
+      <p class="note">3 cohortes · n=6 ratones cada una · End‑point día 14.</p>
+    </section>
+
+    <!-- 6 · Resultados principales: gráfico D3 -->
+    <section class="slide center" data-slide="6">
+      <h3>Eficiencia de edición in vivo</h3>
+      <div id="graph-art1-editing" class="graph"></div>
+      <p class="note">Barra azul =hígado · naranja =pulmón · Media ± SD.</p>
+    </section>
+
+    <!-- 7 · Seguridad y precisión -->
+    <section class="slide" data-slide="7">
+      <h3>Seguridad y precisión</h3>
+      <ul>
+        <li>ALT/AST y creatinina <span class="good">normales</span>.</li>
+        <li>Eventos off‑target <span class="good">≤ 0,1 %</span> en 21 loci (NGS).</li>
+        <li>Sin respuesta inmunitaria (IgG anti‑Cas9) detectable hasta 28 d.</li>
+        <li>Capacidad HDR demostrada en hepatocitos ex vivo <em>via</em> ssDNA.</li>
+      </ul>
+    </section>
+
+    <!-- 8 · Impacto clínico -->
+    <section class="slide" data-slide="8">
+      <h3>Relevancia clínica y próximos pasos</h3>
+      <p class="lead">Plataforma modular no viral para enfermedades hepáticas y respiratorias.</p>
+      <ul>
+        <li>Ensayos preclínicos en AAT‑D y fibrosis quística planeados para 2026.</li>
+        <li>Optimizar nuevos SORT para SNC y músculo.</li>
+        <li>Escalado GMP de RNP‑LNP (procesos continuos).</li>
+      </ul>
+      <img src="img/art1_if_rfp.jpg" alt="Células editadas (RFP)" />
+    </section>
+
+    <!-- ==============================================================
+         ARTÍCULO 2 — RSC Pharmaceutics 2024 (GNR‑ICG‑R848)
+    ============================================================== -->
+    <!-- 9 · Portada Artículo 2 -->
+    <section class="slide center" data-slide="9">
+      <h2>Artículo 2</h2>
+      <h3>Nanomedicina teranóstica fototérmica + inmunidad</h3>
+      <p class="journal">RSC Pharmaceutics (2024) · DOI 10.1039/D4PM00033A</p>
+      <figure>
+        <img src="img/art2_scheme1.png" alt="Esquema nanocomplejo GNR‑TAT‑FA@ICG‑R848" />
+        <figcaption>Scheme 1 – ensamblaje y activación en tumor.</figcaption>
+      </figure>
+    </section>
+
+    <!-- 10 · Síntesis y caracterización -->
+    <section class="slide" data-slide="10">
+      <h3>Síntesis y caracterización</h3>
+      <ul>
+        <li>GNR 10×45 nm (seed‑mediated) · Ratio aspecto = 4.5.</li>
+        <li>ICG anclado por absorción π‑π · Pico LSPR desplazado 780→820 nm.</li>
+        <li>R848 encajado en cavidades hidrofóbicas (80 µg mg⁻¹).</li>
+        <li>Recubrimiento PVP + TAT‑FA: ζ‑potential +18 mV.</li>
+      </ul>
+      <img src="img/art2_uv_vis_ft_ir.png" alt="UV‑Vis y FT‑IR" />
+    </section>
+
+    <!-- 11 · Fototermia in vitro -->
+    <section class="slide center" data-slide="11">
+      <h3>Conversión fototérmica</h3>
+      <div id="graph-art2-deltaT" class="graph"></div>
+      <p class="note">Temperatura superficial vs tiempo · Ensayo en PBS.</p>
+    </section>
+
+    <!-- 12 · Citotoxicidad e ICD -->
+    <section class="slide" data-slide="12">
+      <h3>Muerte inmunogénica (ICD)</h3>
+      <ul>
+        <li>CRT y HSP70 ↑4× en 6 h post‑irradiación.</li>
+        <li>HMGB1 liberación nuclear confirmada por confocal.</li>
+        <li>Viabilidad células U14 ≤ 10 % con NC+NIR.</li>
+      </ul>
+      <img src="img/art2_icd.png" alt="Marcadores DAMPs" />
+    </section>
+
+    <!-- 13 · In vivo: curva tumor -->
+    <section class="slide center" data-slide="13">
+      <h3>Inhibición tumoral in vivo</h3>
+      <div id="graph-art2-tumor" class="graph"></div>
+      <p class="note">Ratones U14 · n=5 · Medición hasta día 18.</p>
+    </section>
+
+    <!-- 14 · Respuesta inmune y fases siguientes -->
+    <section class="slide" data-slide="14">
+      <h3>Respuesta inmune sistémica</h3>
+      <ol>
+        <li>DC maduras ↑6× (flow cytometry).</li>
+        <li>CD8⁺ ↑3× · CD4⁺ ↑2.5× · Tregs ↓60 %.</li>
+        <li>Protección 100 % frente a re‑reto tumoral día 30.</li>
+        <li>Limitaciones: penetración 808 nm &lt;10 mm → explorar NIR‑II.</li>
+      </ol>
+    </section>
+
+    <!-- ==============================================================
+         ARTÍCULO 3 — Biosensors & Bioelectronics 2025 (rGO‑biosensor)
+    ============================================================== -->
+    <!-- 15 · Portada Artículo 3 -->
+    <section class="slide center" data-slide="15">
+      <h2>Artículo 3</h2>
+      <h3>Biosensor rGO fototérmico para miRNA‑21</h3>
+      <p class="journal">Biosensors & Bioelectronics (2025) · DOI 10.1016/j.bios.2025.117532</p>
+      <figure>
+        <img src="img/art3_overview.png" alt="Esquema biosensor" />
+        <figcaption>Vista 3‑D de la arquitectura sensor + AuNP.</figcaption>
+      </figure>
+    </section>
+
+    <!-- 16 · Diseño del biosensor -->
+    <section class="slide" data-slide="16">
+      <h3>Arquitectura del chip</h3>
+      <ul>
+        <li>Substrato vidrio · rGO monolámina (ID/IG = 1.2 Raman).</li>
+        <li>PBASE enlazador · Densidad sondas ADN ≈ 3.5×10¹² mol cm⁻².</li>
+        <li>Competidor AuNP‑ssDNA (Ø15 nm) ↑ amplificación óptica 6 dB.</li>
+        <li>Láser 785 nm 10 mW cm⁻² → ΔT 12 °C.</li>
+      </ul>
+      <img src="img/art3_layers.png" alt="Capas del biosensor" />
+    </section>
+
+    <!-- 17 · Fototermia -->
+    <section class="slide center" data-slide="17">
+      <h3>Calentamiento fototérmico</h3>
+      <div id="graph-art3-deltaT" class="graph"></div>
+      <p class="note">ΔT superficie rGO vs rGO+AuNP.</p>
+    </section>
+
+    <!-- 18 · Linealidad detección -->
+    <section class="slide center" data-slide="18">
+      <h3>Linealidad de detección de miR‑21</h3>
+      <div id="graph-art3-linearity" class="graph"></div>
+      <p class="note">R² = 0.993 · 5–100 fM.</p>
+    </section>
+
+    <!-- 19 · Métricas de desempeño -->
+    <section class="slide" data-slide="19">
+      <h3>Métricas clave del biosensor</h3>
+      <table>
+        <thead><tr><th>Parámetro</th><th>Valor</th><th>Comentario</th></tr></thead>
+        <tbody>
+          <tr><td>LOD</td><td>4.05 fM</td><td>Sensibilidad sin enzimas</td></tr>
+          <tr><td>Tiempo total</td><td>10 min</td><td>Calor acelera cinética</td></tr>
+          <tr><td>Selectividad</td><td>&lt;15 % señal en mut</td><td>1–3 desajustes</td></tr>
+          <tr><td>Recuperación</td><td>94–106 %</td><td>Orina humana</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 20 · Cierre -->
+    <section class="slide center" data-slide="20">
+      <h2>¡Gracias!</h2>
+      <p class="subtitle">Preguntas · Discusión · Próximos pasos</p>
+      <p class="hint">Usa ← para retroceder o → para repasar.</p>
+    </section>
+  </main>
+
+  <!-- Scripts principales -->
+  <script type="module" src="main.js"></script>
+  <script type="module" src="d3-graphs.js"></script>
+</body>
+</html>

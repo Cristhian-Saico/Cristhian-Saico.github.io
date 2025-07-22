@@ -1,0 +1,120 @@
+/* ==========================================
+  styles.css – Presentación Nanotecnología
+  ========================================== */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+:root {
+  /* Paleta de colores */
+  --bg: #0e0e11;
+  --fg: #e8e8f2;
+  --accent: #64d3ff;
+  --accent-light: #a5e8ff;
+  --accent-dark: #2196f3;
+  --good: #6ddf8b;
+  --warn: #ffbd4a;
+  --danger: #ff708d;
+
+  /* Tipografía */
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Dimensiones */
+  --pad: 2rem;
+}
+
+/* Reseteo básico */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { height: 100%; width: 100%; margin: 0; padding: 0; }
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--fg);
+  overflow: hidden; /* Evita scroll global, lo gestiona JS */
+}
+img { max-width: 100%; height: auto; border-radius: .75rem; box-shadow: 0 4px 16px rgb(0 0 0 / .3); }
+figure { margin: 1.5rem 0; text-align: center; }
+figcaption { font-size: .9rem; opacity: .7; margin-top: .5rem; }
+
+h1, h2, h3, h4 { font-weight: 600; margin: 0 0 .75rem; line-height: 1.2; }
+h1 { font-size: clamp(2.5rem, 6vw, 4rem); }
+h1 .thin { font-weight: 300; }
+h2 { font-size: clamp(1.75rem, 4vw, 3rem); }
+h3 { font-size: clamp(1.3rem, 3vw, 2.25rem); }
+
+p { margin: 0 0 1rem; line-height: 1.6; }
+ul, ol { margin: 0 0 1.25rem 1.25rem; padding: 0; }
+li { margin-bottom: .5rem; }
+
+/* Clases utilitarias */
+.good { color: var(--good); font-weight: 600; }
+.lead { font-size: 1.25rem; margin-bottom: 1rem; }
+.subtitle { font-size: 1.1rem; opacity: .8; margin-top: .5rem; }
+.author { margin-top: .75rem; opacity: .8; }
+.hint { margin-top: 2rem; font-size: .9rem; opacity: .6; }
+.note { font-size: .85rem; opacity: .7; margin-top: 1rem; }
+.journal { font-size: .95rem; opacity: .8; margin-bottom: .75rem; }
+
+/* Presentación */
+#slides { position: relative; width: 100vw; height: 100vh; }
+.slide {
+  width: 100vw;
+  height: 100vh;
+  padding: var(--pad);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform .8s ease, opacity .8s ease;
+}
+.slide.active { opacity: 1; transform: translateX(0); z-index: 1; }
+.slide.prev { opacity: 0; transform: translateX(-100%); }
+
+.center { justify-content: center; align-items: center; text-align: center; }
+.cover { background: radial-gradient(circle at 30% 30%, var(--accent-dark) 0%, #1b1b24 60%, var(--bg) 100%); color: #fff; }
+
+/* Tablas */
+.table, table { border-collapse: collapse; width: 90%; max-width: 900px; margin: 0 auto; font-size: .9rem; }
+th, td { padding: .6rem .8rem; border: 1px solid rgba(255,255,255,.12); }
+th { background: rgba(255,255,255,.06); font-weight: 600; }
+tr:nth-child(odd) td { background: rgba(255,255,255,.03); }
+
+/* Gráficos */
+.graph { width: 80vw; max-width: 900px; height: 50vh; margin: 0 auto; }
+
+/* Teclas visuales */
+kbd {
+  display: inline-block;
+  padding: .15rem .45rem;
+  border: 1px solid rgba(255,255,255,.4);
+  border-radius: .35rem;
+  font-size: .8rem;
+  background: rgba(255,255,255,.07);
+}
+
+/* Scrollbar refinado para slides con overflow */
+.slide::-webkit-scrollbar { width: 8px; }
+.slide::-webkit-scrollbar-track { background: rgba(255,255,255,.05); }
+.slide::-webkit-scrollbar-thumb { background: rgba(255,255,255,.2); border-radius: 4px; }
+
+/* Animaciones pequeñas */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.slide.active h2, .slide.active h3, .slide.active p, .slide.active ul, .slide.active ol, .slide.active table, .slide.active figure {
+  animation: fadeInUp .6s ease backwards;
+}
+
+/* Responsive ajustes */
+@media (max-width: 480px) {
+  :root { --pad: 1rem; }
+  .graph { height: 45vh; }
+  table { font-size: .8rem; }
+}
+
