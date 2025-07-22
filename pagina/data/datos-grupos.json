@@ -1,0 +1,56 @@
+{
+  "quantumquipu": {
+    "nombre": "QuantumQuipu",
+    "tipo": "Grupo de Investigación",
+    "descripcion": "Grupo especializado en computación cuántica, promoviendo formación y desarrollo de algoritmos en la UNMSM.",
+    "universidad": "unmsm",
+    "personas": ["ricardo-quispe", "teofilo-vargas", "enrique-solano"],
+    "enlace": "https://www.quantumquipu.org",
+    "imagen": ""
+  },
+  "gae-pucp": {
+    "nombre": "Grupo de Altas Energías (GAE-PUCP)",
+    "tipo": "Grupo de Investigación",
+    "descripcion": "Grupo líder en física de partículas y astropartículas en el Perú, colaborador en experimentos como ALICE, DUNE y SWGO.",
+    "universidad": "pucp",
+    "personas": ["alberto-gago", "lucia-coll"],
+    "enlace": "https://fisica.pucp.edu.pe/investigacion/gae",
+    "imagen": ""
+  },
+  "gipc": {
+    "nombre": "Grupo de Investigación en Física de Partículas y Cosmología (GIPC)",
+    "tipo": "Grupo de Investigación",
+    "descripcion": "Grupo independiente que reúne investigadores peruanos interesados en física de partículas y cosmología teórica.",
+    "universidad": "independiente",
+    "personas": ["ronald-abugattas", "percy-catacora"],
+    "enlace": "https://www.gipc.org.pe",
+    "imagen": "https://www.gipc.org.pe/logo.png"
+  },
+  "mater-pucp": {
+    "nombre": "Grupo Ciencia de Materiales y Energías Renovables (MatER)",
+    "tipo": "Grupo de Investigación",
+    "descripcion": "Grupo enfocado en materiales funcionales aplicados a energías renovables y tecnologías ambientales.",
+    "universidad": "pucp",
+    "personas": ["jorge-guerra", "carmen-gallegos", "paolo-calle"],
+    "enlace": "https://fisica.pucp.edu.pe/investigacion/mater",
+    "imagen": ""
+  },
+  "giaa-uni": {
+    "nombre": "Grupo de Investigación en Astronomía y Astrofísica (GIAA)",
+    "tipo": "Grupo de Investigación",
+    "descripcion": "Grupo de la UNI centrado en observación astronómica, variabilidad estelar y educación astronómica.",
+    "universidad": "uni",
+    "personas": ["maria-zevallos", "julio-tello", "antonio-pereyra"],
+    "enlace": "https://www.oauni.uni.edu.pe",
+    "imagen": ""
+  },
+  "gibiobes-unmsm": {
+    "nombre": "Grupo de Investigación en Bioinformática y Biología Estructural (GIBIOBES)",
+    "tipo": "Grupo de Investigación",
+    "descripcion": "Grupo de la UNMSM dedicado a la bioinformática, biotecnología y modelado estructural de proteínas.",
+    "universidad": "unmsm",
+    "personas": ["gustavo-sandoval", "walter-manya", "miguel-neira"],
+    "enlace": "https://investigacion.unmsm.edu.pe/gibiobes",
+    "imagen": ""
+  }
+}

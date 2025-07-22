@@ -1,0 +1,42 @@
+/* =====================================================================
+   REGISTRARME.CSS v1.0 – Formulario de registro UX/UI moderno
+   ===================================================================== */
+
+/* ---------- Hero -------------------------------------------------- */
+.reg-hero{
+  background:url("/assets/images/registro-banner.jpg") center/cover no-repeat;
+  min-height:45vh;display:flex;align-items:center;position:relative;color:#fff
+}
+.reg-hero::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.45)}
+.reg-hero .container{position:relative;z-index:1;text-align:center}
+.reg-title  {font-family:var(--app-font-heading);font-size:clamp(2.5rem,5vw,3.2rem);margin-bottom:1rem}
+.reg-subtitle{font-size:clamp(1.1rem,2.4vw,1.4rem)}
+
+/* ---------- Formulario ------------------------------------------- */
+.section-pad{padding-block:5rem}
+@media(max-width:768px){.section-pad{padding-block:3.5rem}}
+
+.reg-form{display:flex;flex-direction:column;gap:1.5rem}
+.form-row{display:flex;gap:1rem}
+/*.form-row.full{flex-direction:column}*/
+
+.reg-form input,
+.reg-form select,
+.reg-form textarea{
+  flex:1 1 0;
+  padding:1rem;
+  border:1px solid var(--app-color-border);
+  border-radius:var(--app-border-radius);
+  font-size:1rem;font-family:inherit;
+}
+.reg-form select{cursor:pointer}
+.reg-form input:focus,
+.reg-form select:focus,
+.reg-form textarea:focus{outline:2px solid var(--app-color-accent)}
+
+.reg-form button{align-self:center;padding:1rem 3rem}
+
+/* Responsive: apila inputs en mobile */
+@media(max-width:600px){
+  .form-row{flex-direction:column}
+}

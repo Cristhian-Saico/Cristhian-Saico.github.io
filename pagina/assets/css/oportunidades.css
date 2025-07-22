@@ -1,0 +1,50 @@
+/* =====================================================================
+   OPORTUNIDADES.CSS v1.0
+   ===================================================================== */
+
+/* ---------- Filtros ----------------------------------------------- */
+.opp-filter{background:var(--app-color-surface);border-bottom:1px solid var(--app-color-border);padding:.9rem 0}
+.opp-filter .container{display:flex;flex-wrap:wrap;align-items:center;gap:1rem}
+
+#oppYear{appearance:none;-webkit-appearance:none;
+  background:var(--app-color-primary) url("/assets/images/chevron.svg") right .8rem center/12px no-repeat;
+  color:#fff;border:none;border-radius:var(--app-border-radius);
+  padding:.55rem 2.3rem .55rem 1rem;font-size:.95rem;cursor:pointer}
+#oppYear:hover{background:var(--app-color-secondary)}
+#oppYear:focus-visible{outline:2px solid var(--app-color-accent)}
+
+.tags{display:flex;gap:.8rem;flex-wrap:wrap}
+.tag{
+  padding:.55rem 1rem;border-radius:var(--app-border-radius);border:none;cursor:pointer;
+  font-size:.9rem;color:#fff;transition:background .25s,transform .15s
+}
+.tag[data-type="becas"]          {background:#0077FF}   /* azul */
+.tag[data-type="traslados"]      {background:#FF5722}   /* naranja */
+.tag[data-type="congresos"]      {background:#8E24AA}   /* púrpura */
+.tag[data-type="financiamientos"]{background:#2E7D32}   /* verde  */
+.tag:hover{transform:translateY(-2px)}
+.tag.active{box-shadow:0 2px 6px rgba(0,0,0,.2);filter:brightness(1.1)}
+.tag:focus-visible{outline:2px solid var(--app-color-accent)}
+
+/* ---------- Tarjetas ---------------------------------------------- */
+.section-pad{padding-block:4.5rem}
+.grid{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+
+.card{
+  background:var(--app-color-surface);border-radius:var(--app-border-radius);
+  box-shadow:var(--app-shadow-soft);overflow:hidden;display:flex;flex-direction:column
+}
+.card img{width:100%;height:180px;object-fit:cover}
+.card__body{padding:1.25rem;flex:1}
+.card h3{font-size:1.15rem;margin-bottom:.4rem}
+.card p{font-size:.9rem;color:var(--app-color-text-secondary)}
+.card__meta{font-size:.8rem;margin:.6rem 0 1rem}
+.badge{
+  display:inline-block;padding:.25rem .6rem;border-radius:9999px;font-size:.75rem;font-weight:600;color:#fff
+}
+.badge.becas          {background:#0077FF}
+.badge.traslados      {background:#FF5722}
+.badge.congresos      {background:#8E24AA}
+.badge.financiamientos{background:#2E7D32}
+
+.card .btn{margin-top:1rem}

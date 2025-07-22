@@ -1,0 +1,128 @@
+{
+  "uni": {
+    "nombre": "Universidad Nacional de Ingeniería (UNI)",
+    "tipo": "Universidad",
+    "descripcion": "Universidad pública especializada en ingeniería y ciencias, con posgrados en física y matemática.",
+    "enlace": "https://www.uni.edu.pe",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Logo_UNI.png",
+    "personas": ["santiago-antunez-de-mayolo", "modesto-montoya"],
+    "grupos": ["grupo-electroquimica", "reactor-nuclear"]
+  },
+  "san-marcos": {
+    "nombre": "Universidad Nacional Mayor de San Marcos (UNMSM)",
+    "tipo": "Universidad",
+    "descripcion": "La universidad más antigua de América, líder en ciencias y posgrados en Lima.",
+    "enlace": "https://www.unmsm.edu.pe",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/4/4e/UNMSM_logo.svg",
+    "personas": ["federico-villarreal", "carlos-monge-medrano"],
+    "grupos": ["museo-historia-natural", "space"]
+  },
+  "pucp": {
+    "nombre": "Pontificia Universidad Católica del Perú (PUCP)",
+    "tipo": "Universidad",
+    "descripcion": "Privada, con centros de investigación y posgrados en ciencias e ingeniería.",
+    "enlace": "https://www.pucp.edu.pe",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Logo_PUCP.svg",
+    "personas": ["alberto-gago", "jorge-heraud"],
+    "grupos": ["instituto-radioastronomia", "grupo-altas-energias"]
+  },
+  "unt": {
+    "nombre": "Universidad Nacional de Trujillo (UNT)",
+    "tipo": "Universidad",
+    "descripcion": "Pública y antigua, con enfoque en ciencias naturales y agroindustria.",
+    "enlace": "https://www.unitru.edu.pe",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Logo_UNT.png"
+  },
+  "unac": {
+    "nombre": "Universidad Nacional del Callao (UNAC)",
+    "tipo": "Universidad",
+    "descripcion": "Universidad técnica con programas en pesca, energía e ingeniería.",
+    "enlace": "https://www.unac.edu.pe",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Logo_UNAC.png"
+  },
+  "unalm": {
+    "nombre": "Universidad Nacional Agraria La Molina (UNALM)",
+    "tipo": "Universidad",
+    "descripcion": "Referente en agronomía y recursos naturales, con fuerte enfoque en investigación.",
+    "enlace": "https://www.lamolina.edu.pe",
+    "personas": ["antonio-brack-egg"],
+    "grupos": ["herbario-mol"]
+  },
+  "unfv": {
+    "nombre": "Universidad Nacional Federico Villarreal (UNFV)",
+    "tipo": "Universidad",
+    "descripcion": "Pública, con carreras y posgrados en ciencias básicas y educación.",
+    "enlace": "https://www.unfv.edu.pe"
+  },
+  "san-agustin": {
+    "nombre": "Universidad Nacional de San Agustín de Arequipa (UNSA)",
+    "tipo": "Universidad",
+    "descripcion": "Histórica universidad del sur, con investigación en minería y medio ambiente.",
+    "enlace": "https://www.unsa.edu.pe"
+  },
+  "san-antonio": {
+    "nombre": "Universidad Nacional de San Antonio Abad del Cusco (UNSAAC)",
+    "tipo": "Universidad",
+    "descripcion": "Tradición científica andina, con enfoque en geología, biodiversidad y astronomía.",
+    "enlace": "https://www.unsaac.edu.pe",
+    "personas": ["fortunato-herrera"],
+    "grupos": ["observatorio-cusco"]
+  },
+  "unp": {
+    "nombre": "Universidad Nacional de Piura (UNP)",
+    "tipo": "Universidad",
+    "descripcion": "Científica del norte con carreras en biología, agronomía e ingeniería.",
+    "enlace": "https://www.unp.edu.pe"
+  },
+  "unap": {
+    "nombre": "Universidad Nacional de la Amazonía Peruana (UNAP)",
+    "tipo": "Universidad",
+    "descripcion": "Centrada en la investigación de la biodiversidad amazónica y los recursos naturales.",
+    "enlace": "https://www.unapiquitos.edu.pe"
+  },
+  "uncp": {
+    "nombre": "Universidad Nacional del Centro del Perú (UNCP)",
+    "tipo": "Universidad",
+    "descripcion": "Pública andina, con programas en ciencias, salud y agropecuaria de altura.",
+    "enlace": "https://www.uncp.edu.pe"
+  },
+  "unprg": {
+    "nombre": "Universidad Nacional Pedro Ruiz Gallo (UNPRG)",
+    "tipo": "Universidad",
+    "descripcion": "Enfocada en medicina veterinaria, biología tropical y recursos hídricos.",
+    "enlace": "https://www.unprg.edu.pe"
+  },
+  "una-puno": {
+    "nombre": "Universidad Nacional del Altiplano (UNA Puno)",
+    "tipo": "Universidad",
+    "descripcion": "Altiplánica, con carreras en medicina andina, agronomía y camélidos.",
+    "enlace": "https://www.unap.edu.pe"
+  },
+  "upch": {
+    "nombre": "Universidad Peruana Cayetano Heredia (UPCH)",
+    "tipo": "Universidad",
+    "descripcion": "Privada líder en biomedicina, fisiología de altura y medicina tropical.",
+    "enlace": "https://www.cayetano.edu.pe",
+    "personas": ["fabiola-leon-velarde", "carlos-bustamante", "fulano-hernandez"],
+    "grupos": ["medicina-tropical", "investigacion-altura"]
+  },
+  "utec": {
+    "nombre": "Universidad de Ingeniería y Tecnología (UTEC)",
+    "tipo": "Universidad",
+    "descripcion": "Universidad joven con enfoque en ingeniería, ciencia aplicada e innovación.",
+    "enlace": "https://www.utec.edu.pe"
+  },
+  "upc": {
+    "nombre": "Universidad Peruana de Ciencias Aplicadas (UPC)",
+    "tipo": "Universidad",
+    "descripcion": "Privada moderna con proyectos en biotecnología, salud e ingeniería.",
+    "enlace": "https://www.upc.edu.pe"
+  },
+  "cientifica-sur": {
+    "nombre": "Universidad Científica del Sur (UCSUR)",
+    "tipo": "Universidad",
+    "descripcion": "Especializada en salud y ambiente, con centros de investigación reconocidos.",
+    "enlace": "https://www.cientifica.edu.pe",
+    "personas": ["ernesto-bustamante", "percy-mayta-tristan"]
+  }
+}

@@ -1,0 +1,69 @@
+/* =====================================================================
+   FOOTER.CSS v1.0 – Pie de página modular y responsive
+   ===================================================================== */
+
+.site-footer{
+  background:var(--app-color-primary);
+  color:var(--app-color-surface);
+  padding-block:3rem 2rem;
+  font-size:.95rem;
+}
+
+.footer__grid{
+  display:grid;
+  gap:2.5rem;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+}
+
+.footer__logo{width:140px;margin-bottom:1rem}
+.footer__tagline{max-width:320px;line-height:1.6;color:var(--app-color-surface)}
+
+.footer__heading{
+  font-family:var(--app-font-heading);
+  font-size:1.1rem;
+  margin-bottom:1rem;
+  display:block;
+}
+
+.footer__list{
+  list-style:none;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  gap:.65rem;
+}
+.footer__list a{
+  color:var(--app-color-surface);
+  text-decoration:none;
+  transition:color var(--app-transition-smooth);
+}
+.footer__list a:hover{color:var(--app-color-accent)}
+
+.social-links{
+  list-style:none;
+  padding:0;
+  display:flex;
+  gap:1rem;
+  align-items:center;
+}
+.social-links img{
+  width:28px;height:28px;
+  filter:invert(1) brightness(2);
+  transition:transform var(--app-transition-smooth);
+}
+.social-links a:hover img{transform:translateY(-3px)}
+
+.footer__bottom{
+  margin-top:2.5rem;
+  text-align:center;
+  border-top:1px solid rgba(255,255,255,.15);
+  padding-top:1.5rem;
+  font-size:.85rem;
+  color:rgba(255,255,255,.8);
+}
+
+/* ---------- Responsive tweak para pantallas pequeñas --------------- */
+@media(max-width:480px){
+  .footer__grid{gap:2rem}
+  .footer__logo{width:120px}
+}

@@ -1,0 +1,23 @@
+{
+  "cientificos-pe": {
+    "nombre": "Cientificos.pe",
+    "tipo": "Misceláneo",
+    "descripcion": "Plataforma que conecta a científicos peruanos y promueve la investigación y la ciencia en el país.",
+    "enlace": "https://www.cientificos.pe",
+    "imagen": "https://www.cientificos.pe/logo.png"
+  },
+  "colegio-fisicos": {
+    "nombre": "Colegio de Físicos del Perú",
+    "tipo": "Misceláneo",
+    "descripcion": "Institución que agrupa a los profesionales de la física en el Perú, promoviendo la ética y el desarrollo profesional.",
+    "enlace": "https://www.colegiodefisicos.pe",
+    "imagen": "https://www.colegiodefisicos.pe/logo.png"
+  },
+  "aspast": {
+    "nombre": "Asociación Peruana de Astrobiología (ASPAST)",
+    "tipo": "Misceláneo",
+    "descripcion": "Organización dedicada a la promoción y desarrollo de la astrobiología en el Perú.",
+    "enlace": "https://www.aspast.org.pe",
+    "imagen": "https://www.aspast.org.pe/logo.png"
+  }
+}

@@ -1,0 +1,104 @@
+/* =====================================================================
+   HEADER.CSS v1.1 – Barra fija y menú responsive
+   ===================================================================== */
+
+.site-header{                     /* antes .header  */
+  position:fixed;
+  inset:0 0 auto 0;              /* top:0;left:0;width:100% */
+  width:100%;
+  background:var(--app-color-surface);
+  box-shadow:var(--app-shadow-soft);
+  z-index:1000;
+}
+
+
+
+.navbar{
+  height:var(--app-header-height);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.nav-logo img{height:40px}
+
+/* ---------- Lista de navegación ---------- */
+.nav-list{
+  display:flex;
+  align-items:center;
+  gap:2.5rem;
+  list-style:none;
+}
+
+.nav-link{
+  font-family:var(--app-font-heading);
+  font-weight:600;
+  font-size:1rem;
+  padding:.5rem 0;
+  position:relative;
+  outline-offset:4px;                          /* accesibilidad */
+  transition:color var(--app-transition-smooth);
+}
+
+/* Subrayado animado (transform ≈ mejor rendimiento que width) */
+.nav-link::after{
+  content:'';
+  position:absolute;
+  left:0;bottom:0;
+  width:100%;height:3px;
+  background:var(--app-color-accent);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform var(--app-transition-smooth);
+}
+
+.nav-link:hover,
+.nav-link.active{color:var(--app-color-primary)}
+
+.nav-link:hover::after,
+.nav-link.active::after{transform:scaleX(1)}
+
+.nav-link:focus-visible{
+  outline:2px solid var(--app-color-accent);
+}
+
+/* ---------- Botón hamburguesa ---------- */
+.nav-toggle{
+  --size:2rem;
+  width:var(--size);height:var(--size);
+  display:none;                                 /* visible en ≤ 768 px */
+  flex-direction:column;
+  justify-content:center;
+  gap:.3rem;
+  background:none;
+  border:none;
+  cursor:pointer;
+}
+.nav-toggle span{
+  display:block;
+  width:100%;height:3px;
+  background:var(--app-color-primary);
+  border-radius:2px;
+  transition:transform var(--app-transition-smooth);
+}
+
+/* ---------- Responsive ≤ 768 px ---------- */
+@media (max-width:768px){
+  .nav-toggle{display:flex}
+
+  .nav-list{
+    position:fixed;
+    inset:0 0 0 30%;                      /* panel lateral */
+    flex-direction:column;
+    align-items:flex-start;
+    padding-top:6rem;
+    gap:1.5rem;
+    background:var(--app-color-surface);
+    transform:translateX(100%);
+    transition:transform var(--app-transition-smooth);
+  }
+  .nav-list.open{transform:translateX(0)}
+
+  /* Bloquea scroll cuando el menú está abierto (añade/quita .nav-open desde JS) */
+  body.nav-open{overflow:hidden}
+}

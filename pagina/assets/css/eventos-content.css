@@ -1,0 +1,79 @@
+/* ===================================================================
+   EVENTOS-CONTENT.CSS v1.1 – Slider + filtros mejorados
+   =================================================================== */
+
+/* ---------- Slider / Hero ---------------------------------------- */
+.events-hero{position:relative;height:70vh;overflow:hidden}
+
+.slider{height:100%;position:relative}
+.slider__viewport{height:100%;overflow:hidden}
+.slider__track{display:flex;height:100%;transition:transform .6s ease}
+.slide{flex:0 0 100%;position:relative}
+.slide img{width:100%;height:100%;object-fit:cover}
+
+.slide__info{
+  position:absolute;inset:0;
+  background:rgba(0,0,0,.45);
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  text-align:center;color:#fff;gap:1rem
+}
+
+/* Flechas */
+.slider__arrow{
+  position:absolute;top:50%;width:48px;height:48px;
+  background:rgba(255,255,255,.85) url("/assets/images/arrow.svg") center/22px no-repeat;
+  border:none;border-radius:50%;cursor:pointer;transform:translateY(-50%);
+  box-shadow:0 2px 6px rgba(0,0,0,.2)
+}
+.slider__arrow--left{left:1rem;rotate:180deg}
+.slider__arrow--right{right:1rem}
+
+/* ---------- Filtro ------------------------------------------------ */
+.events-filter{background:var(--app-color-surface);border-bottom:1px solid var(--app-color-border);padding:.9rem 0}
+.events-filter .container{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
+
+/* Select con apariencia custom */
+#yearSelect{appearance:none;-webkit-appearance:none;-moz-appearance:none;
+  background:var(--app-color-primary) url("/assets/images/chevron.svg") right .8rem center/12px no-repeat;
+  color:#fff;border:none;padding:.55rem 2.5rem .55rem 1rem;border-radius:var(--app-border-radius);
+  font-size:.95rem;cursor:pointer;transition:background .25s}
+#yearSelect:hover{background-color:var(--app-color-secondary)}
+#yearSelect:focus-visible{outline:2px solid var(--app-color-accent)}
+
+/* Tag buttons */
+.tag-btn{background:var(--app-color-primary);color:#fff;border:none;
+  padding:.55rem 1.25rem;border-radius:var(--app-border-radius);
+  cursor:pointer;font-size:.9rem;transition:background .25s,transform .15s}
+.tag-btn:hover{background:var(--app-color-secondary);transform:translateY(-2px)}
+.tag-btn.active{background:var(--app-color-accent);box-shadow:0 2px 6px rgba(0,0,0,.15)}
+.tag-btn:focus-visible{outline:2px solid var(--app-color-accent)}
+
+/* ---------- Grid de eventos pasados -------------------------------- */
+.section-pad{padding-block:4.5rem}
+.events-grid{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.event-card{background:var(--app-color-surface);box-shadow:var(--app-shadow-soft);
+  border-radius:var(--app-border-radius);overflow:hidden;display:flex;flex-direction:column}
+.event-card img{width:100%;height:180px;object-fit:cover}
+.event-card__body{padding:1.25rem;flex:1}
+.event-card h3{font-size:1.2rem;margin-bottom:.5rem}
+.event-card p{font-size:.9rem;color:var(--app-color-text-secondary)}
+.event-card__meta{margin-block:1rem .75rem;font-size:.85rem}
+.event-card .btn{align-self:start}
+
+
+/* === Estilo especial para el botón Registrarme dentro del slider === */
+.events-hero .btn--primary{
+  font-size:1.05rem;
+  padding:1rem 2.5rem;
+  border-radius:var(--app-border-radius);
+  background:var(--app-color-accent);
+  color:#fff;
+  box-shadow:0 4px 12px rgba(0,0,0,.25);
+  transition:background .25s,transform .2s,box-shadow .2s;
+}
+
+.events-hero .btn--primary:hover{
+  background:var(--app-color-accent-hover);
+  transform:translateY(-3px);
+  box-shadow:0 6px 14px rgba(0,0,0,.30);
+}

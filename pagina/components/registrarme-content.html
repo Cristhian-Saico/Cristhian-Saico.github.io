@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="/assets/css/registrarme.css" />
+
+<section class="reg-hero">
+  <div class="container narrow">
+    <h1 class="reg-title">¡Regístrate y sé parte del próximo evento RIdeC!</h1>
+    <p class="reg-subtitle">
+      Tu información nos ayuda a conocer mejor a nuestra comunidad y a diseñar experiencias cada vez más valiosas.
+    </p>
+  </div>
+</section>
+
+<section class="reg-form-wrapper section-pad">
+  <div class="container narrow">
+    <form class="reg-form" action="https://formspree.io/f/tu-endpoint" method="POST">
+      <div class="form-row">
+        <input type="text"     name="nombre"    placeholder="Nombre completo"      required />
+        <input type="email"    name="email"     placeholder="Correo electrónico"   required />
+      </div>
+
+      <div class="form-row">
+        <input type="tel"      name="telefono"  placeholder="Teléfono (opcional)" />
+        <input type="number"   name="edad"      placeholder="Edad" min="15" max="110" />
+      </div>
+
+      <div class="form-row">
+        <input type="text"     name="universidad" placeholder="Universidad / Empresa" required />
+        <select name="area">
+          <option value="" disabled selected>Área de interés</option>
+          <option>Ciencias de la Salud</option>
+          <option>Ingeniería</option>
+          <option>Biología</option>
+          <option>Física / Química</option>
+          <option>Otra</option>
+        </select>
+      </div>
+
+      <div class="form-row full">
+        <textarea name="expectativas" rows="4"
+                  placeholder="¿Qué esperas del evento? (opcional)"></textarea>
+      </div>
+
+      <button class="btn btn--primary" type="submit">Enviar registro</button>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,63 @@
+<!-- /components/eventos-content.html -->
+<link rel="stylesheet" href="/assets/css/eventos-content.css" />
+
+<!-- 1 · BANNER / SLIDER  (EVENTOS) -->
+<section class="events-hero">
+  <div class="slider">
+    <button class="slider__arrow slider__arrow--left" aria-label="Anterior"></button>
+
+    <div class="slider__viewport">
+      <div class="slider__track">
+        <!-- Diapositiva 1 -->
+        <article class="slide">
+          <img src="/assets/images/bioinformatica.jpg" alt="Explorando Ciencias" />
+          <div class="slide__info">
+            <h2>Explorando Ciencias</h2>
+            <button class="btn btn--primary" onclick="location.href='/registrarme.html'"> Registrarme </button>
+          </div>
+        </article>
+
+        <!-- Diapositiva 2 -->
+        <article class="slide">
+          <img src="/assets/images/bioinformatica.jpg" alt="Generando Lazos" />
+          <div class="slide__info">
+            <h2>Generando Lazos</h2>
+            <button class="btn btn--primary" onclick="location.href='/registrarme.html'"> Registrarme </button>
+          </div>
+        </article>
+
+        <!-- Diapositiva 3 -->
+        <article class="slide">
+          <img src="/assets/images/bioinformatica.jpg" alt="Próximo evento" />
+          <div class="slide__info">
+            <h2>Próximamente…</h2>
+            <button class="btn btn--primary" onclick="location.href='/registrarme.html'"> Registrarme </button>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <button class="slider__arrow slider__arrow--right" aria-label="Siguiente"></button>
+  </div>
+</section>
+
+<!-- 2 · FILTRO + EVENTOS PASADOS ---------------------------------- -->
+<section class="events-filter">
+  <div class="container">
+    <label for="yearSelect">Año:</label>
+    <select id="yearSelect">
+      <option value="all">Todos</option>
+      <option>2024</option><option>2023</option><option>2022</option>
+      <option>2021</option><option>2020</option>
+    </select>
+
+    <button class="tag-btn" data-type="explorando">Explorando Ciencias</button>
+    <button class="tag-btn" data-type="lazos">Generando Lazos</button>
+  </div>
+</section>
+
+<section class="events-past section-pad">
+  <div class="container events-grid" id="eventsGrid">
+    <!-- tarjetas generadas por JS -->
+  </div>
+</section>

@@ -1,0 +1,72 @@
+{
+  "fulano-hernandez": {
+    "nombre": "Fulano Hernández",
+    "tipo": "Persona",
+    "descripcion": "Investigador destacado en biomedicina, con múltiples publicaciones en revistas científicas de alto impacto.",
+    "universidad": "upch"
+  },
+  "fabiola-leon-velarde": {
+    "nombre": "Fabiola León-Velarde",
+    "tipo": "Persona",
+    "imagen": "./img/fabiola-leon.webp",
+    "descripcion": "Fisióloga especializada en adaptación a la altura; exrectora de UPCH y expresidenta de Concytec.",
+    "universidad": "upch",
+    "grupos": []
+  },
+  "luis-felipe-delgado-aparicio": {
+    "nombre": "Luis Felipe Delgado-Aparicio",
+    "tipo": "Persona",
+    "descripcion": "Físico de plasmas que lidera proyectos de fusión nuclear (\"sol artificial\") en el Princeton Plasma Physics Lab.",
+    "universidad": "pucp",
+    "grupos": ["pppl"]
+  },
+  "marino-morikawa": {
+    "nombre": "Marino Morikawa",
+    "tipo": "Persona",
+    "descripcion": "Científico ambiental que aplica nanotecnología para limpiar aguas; revivió el humedal El Cascajo.",
+    "universidad": "tsukuba",
+    "grupos": ["nanoplus7"]
+  },
+  "joanna-alfaro-shigueto": {
+    "nombre": "Joanna Alfaro Shigueto",
+    "tipo": "Persona",
+    "descripcion": "Bióloga marina conservacionista, cofundadora de ProDelphinus para proteger fauna marina.",
+    "universidad": "ucsur",
+    "grupos": ["prodelphinus"]
+  },
+  "mario-urbina": {
+    "nombre": "Mario Urbina Schmitt",
+    "tipo": "Persona",
+    "descripcion": "Paleontólogo del Museo de Historia Natural (UNMSM) que descubrió el fósil del cetáceo gigante Perucetus colossus.",
+    "universidad": "unmsm",
+    "grupos": []
+  },
+  "eduardo-reategui": {
+    "nombre": "Eduardo Reátegui",
+    "tipo": "Persona",
+    "descripcion": "Ingeniero biomédico que desarrolló un biochip para detección temprana de cáncer de pulmón a través de sangre.",
+    "universidad": "osu",
+    "grupos": []
+  },
+  "susana-deustua": {
+    "nombre": "Susana Deustua",
+    "tipo": "Persona",
+    "descripcion": "Astrónoma que calibra telescopios espaciales de la NASA (Hubble, Webb) y colabora en el nuevo telescopio Roman.",
+    "universidad": "stsci",
+    "grupos": []
+  },
+  "ken-takahashi": {
+    "nombre": "Ken Takahashi",
+    "tipo": "Persona",
+    "descripcion": "Climatólogo experto en El Niño; investigador principal del IGP y exjefe del SENAMHI.",
+    "universidad": "igp",
+    "grupos": []
+  },
+  "ronald-woodman": {
+    "nombre": "Ronald Woodman Pollitt",
+    "tipo": "Persona",
+    "descripcion": "Geofísico pionero, expresidente del IGP y líder en desarrollo del Observatorio de Jicamarca.",
+    "universidad": "igp",
+    "grupos": []
+  }
+}

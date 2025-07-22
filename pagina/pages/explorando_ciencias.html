@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Explorando Ciencias | Evento</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/evento.css">
+    <link rel="stylesheet" href="/assets/css/explorando_ciencias.css">
+</head>
+<body>
+    <!--
+        Baner 
+        Descripción del evento
+        Ponentes contacto
+        Video de youtube del evento
+    -->
+    <nav class="navbar">
+        <div class="nav-logo">Divulgación Científica</div>
+        <ul class="nav-menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Eventos</a></li>
+            <li><a href="#">Oportunidades</a></li>
+        </ul>
+    </nav>
+
+    <main class="evento-main">
+        <div class="evento-header">
+            <div class="evento-titulo">
+                <h1>Explorando Ciencias</h1>
+            </div>
+            <nav class="breadcrumbs">
+                <a href="#">Inicio</a> /
+                <a href="#">Eventos</a> /
+                <span>Explorando Ciencias</span>
+            </nav>
+        </div>
+
+        <section class="evento-info">
+            <img class="evento-img" src="/assets/images/eventos/01.jpg" alt="Microscopio">
+            <div class="evento-detalles">
+                <div>
+                    <h2>Sobre el evento</h2>
+                    <p>
+            “Explorando Ciencias” es un evento anual que reúne a expertos y entusiastas para compartir los últimos avances, discutir ideas innovadoras y fomentar la curiosidad científica en la comunidad.
+                    </p>
+                </div>
+                <ul class="detalles-lista">
+                    <li><b>Fecha:</b> <span id="evento-fecha">15 de agosto de 2024</span></li>
+                    <li><b>Lugar:</b> <span id="evento-lugar">Auditorio del Centro de Convenciones</span></li>
+                    <li><b>Duración:</b> 8 horas</li>
+                    <li><b>Modalidad:</b> Charlas y talleres</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="evento-objetivos">
+            <h2>Objetivos del evento</h2>
+            <ul>
+                <li>Actualizarse sobre los avances más recientes en ciencias naturales y exactas.</li>
+                <li>Fomentar el intercambio de ideas y la colaboración multidisciplinaria.</li>
+                <li>Promover la vocación científica en jóvenes y profesionales.</li>
+            </ul>
+        </section>
+
+        <section class="evento-ponentes">
+            <h2>Ponentes principales</h2>
+            <div class="ponentes-lista">
+                <div class="ponente-card">
+                    <img src="/assets/images/explorando_ciencias/01.jpeg" alt="Dra. Camila">
+                    <div>
+                        <b>Dra. Carla Méndez</b>
+                        <p>Bióloga molecular</p>
+                    </div>
+                </div>
+                <div class="ponente-card">
+                    <img src="/assets/images/explorando_ciencias/02.jpeg" alt="Dr. Jorge">
+                    <div>
+                        <b>Dr. Santiago Raíz</b>
+                        <p>Profesor de Física</p>
+                    </div>
+                </div>
+                <div class="ponente-card">
+                    <img src="/assets/images/explorando_ciencias/03.jpeg" alt="Dra. Santiago">
+                    <div>
+                        <b>Dra. Laura Campos</b>
+                        <p>Especialista en neurociencias</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="evento-programa">
+            <h2>Programa</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hora</th>
+                        <th>Actividad</th>
+                    </tr>
+                </thead>
+                <tbody id="programa-tbody">
+                <!-- Programa se carga según año -->
+                </tbody>
+            </table>
+            <a href="#" class="btn-inscripcion" id="btn-inscripcion">Inscribirse</a>
+        </section>
+
+        <section class="evento-galeria">
+            <h2>Galería y testimonios</h2>
+            <div class="galeria-testimonios">
+                <div class="galeria-fotos">
+                    <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=facearea&w=300&q=80" alt="Foto evento 1">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=300&q=80" alt="Foto evento 2">
+                </div>
+                <div class="testimonios">
+                    <blockquote>
+                        “Siempre aprendo algo nuevo y valioso en Explorando Ciencias.”
+                        <cite>- Andrea M., asistente 2023</cite>
+                    </blockquote>
+                    <blockquote>
+                        “Un espacio fundamental para la divulgación científica.”<br>
+                        <cite>- Luis P., expositor 2022</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <div class="volver-lista">
+            <a href="/pages/eventos.html" class="btn-volver">← Volver a todos los eventos</a>
+        </div>
+    </main>
+
+    <script src="/assets/js/eventos.js"></script>
+    <script src="/assets/js/explorando_ciencias.js"></script>
+</body>
+</html>

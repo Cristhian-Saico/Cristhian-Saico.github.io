@@ -1,0 +1,75 @@
+<!-- /components/home-content.html -->
+<link rel="stylesheet" href="/assets/css/home-content.css" />
+
+<!-- ① Banner HERO (fullscreen) -->
+<section class="banner section-full">
+  <div class="banner__content container">
+    <h1 class="banner__title">
+      Bienvenido a la<br />
+      <span class="highlight">Red Interuniversitaria de Ciencias</span>
+    </h1>
+    <p class="banner__subtitle">
+      Conectamos talento, ciencia y oportunidades para impulsar tu desarrollo profesional.
+    </p>
+    <a class="btn btn--primary" href="#contacto">Contáctanos</a>
+  </div>
+</section>
+
+<!-- ② Tarjetas informativas (fullscreen) -->
+<section class="info-cards section-full">
+  <div class="container centered">
+    <h2 class="section-title">¿Qué encontrarás en RIdeC?</h2>
+
+    <div class="cards-grid">
+      <article class="card">
+        <img src="/assets/images/icon-network.svg" alt="" class="card__icon" />
+        <h3 class="card__title">Networking</h3>
+        <p class="card__text">
+          Conecta con estudiantes y profesionales de diferentes universidades, comparte experiencias y amplía tu red.
+        </p>
+      </article>
+
+      <article class="card">
+        <img src="/assets/images/icon-events.svg" alt="" class="card__icon" />
+        <h3 class="card__title">Eventos</h3>
+        <p class="card__text">
+          Talleres, charlas y congresos con ponentes de primer nivel. Mejora tus habilidades y mantente al día.
+        </p>
+      </article>
+
+      <article class="card">
+        <img src="/assets/images/icon-opportunities.svg" alt="" class="card__icon" />
+        <h3 class="card__title">Oportunidades</h3>
+        <p class="card__text">
+          Becas, pasantías y convocatorias exclusivas para miembros. ¡Da el siguiente paso en tu carrera!
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ③ Formulario de contacto (fullscreen) -->
+<section class="contact section-full" id="contacto">
+  <div class="container centered">
+    <h2 class="section-title section-title--light">Ponte en contacto</h2>
+
+    <form class="contact-form" action="https://formspree.io/f/tu-endpoint" method="POST">
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+      </div>
+
+      <button class="btn btn--primary" type="submit">Enviar mensaje</button>
+    </form>
+  </div>
+</section>

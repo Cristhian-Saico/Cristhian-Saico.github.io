@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="/assets/css/oportunidades.css" />
+
+<!-- ① Filtros -->
+<section class="opp-filter">
+  <div class="container">
+    <label for="oppYear">Año:</label>
+    <select id="oppYear">
+      <option value="all">Todos</option>
+      <option>2025</option><option>2024</option><option>2023</option>
+      <option>2022</option><option>2021</option><option>2020</option>
+    </select>
+
+    <div class="tags">
+      <button class="tag" data-type="becas">Becas</button>
+      <button class="tag" data-type="traslados">Traslados</button>
+      <button class="tag" data-type="congresos">Congresos</button>
+      <button class="tag" data-type="financiamientos">Financiamientos</button>
+    </div>
+  </div>
+</section>
+
+<!-- ② Contenedor de tarjetas -->
+<section class="opp-list section-pad">
+  <div class="container grid" id="oppGrid">
+    <!-- tarjetas renderizadas por JS -->
+  </div>
+</section>
