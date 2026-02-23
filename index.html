@@ -1,87 +1,103 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cristhian Saico | Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristhian Saico | AI & Machine Learning</title>
+    <meta name="description" content="Portafolio de Cristhian Saico, estudiante de Computación Científica especializado en Inteligencia Artificial y Machine Learnign.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7" defer></script>
+    <script src="main.js" defer></script>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="container">
-      <a href="#" class="logo">CS<span>.dev</span></a>
-      <ul class="nav-links">
-        <li><a href="#about">Sobre mí</a></li>
-        <li><a href="#experience">Trayectoria</a></li>
-        <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#contact">Contacto</a></li>
-      </ul>
-    </div>
-  </nav>
 
-  <header class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <h1>Cristhian <span class="accent">Saico</span></h1>
-        <p class="tagline">Computación Científica @ UNMSM | AI & Data Science</p>
-        <div class="social-icons">
-          <a href="https://github.com/Cristhian-Saico" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://linkedin.com/in/cristhian-saico" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="mailto:cristhiandanielml@gmail.com"><i class="fas fa-envelope"></i></a>
-        </div>
-      </div>
-    </div>
-  </header>
+    <header class="navbar">
+        <a href="#hero" class="brand" aria-label="Ir al inicio">CS<span>.</span></a>
+        <nav aria-label="Navegación principal">
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-item">Inicio</a></li>
+                <li><a href="#about" class="nav-item">Perfil</a></li>
+                <!-- <li><a href="#experience" class="nav-item">Experiencia</a></li> -->
+                <li><a href="#projects" class="nav-item">Proyectos</a></li>
+            </ul>
+        </nav>
+        <a href="mailto:cristhiandanielml@gmail.com" class="btn-outline">Contactar</a>
+    </header>
 
-  <main class="container">
-    <section id="about" class="section">
-      <h2 class="section-title">Perfil Profesional</h2>
-      <p class="profile-text">
-        Estudiante de 7mo ciclo enfocado en <strong>Ciencia de Datos e IA</strong>. Especializado en el desarrollo de modelos predictivos y análisis de datos complejos, con una base sólida en matemáticas y computación científica.
-      </p>
-    </section>
+    <main class="snap-container">
+        
+        <section id="hero" class="snap-section">
+            <div class="content-wrapper hero-layout">
+                <div class="hero-text">
+                    <span class="eyebrow">UNMSM • Computación Científica</span>
+                    <h1>Cristhian <span class="text-gradient">Saico</span></h1>
+                    <p class="subtitle">Enfoque en IA y Machine Learning.</p>
+                    <div class="social-pills">
+                        <a href="https://github.com/Cristhian-Saico" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://linkedin.com/in/cristhian-saico" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-down"><i class="fas fa-chevron-down"></i></div>
+        </section>
 
-    <section id="skills" class="section">
-      <h2 class="section-title">Habilidades Técnicas</h2>
-      <div class="skills-wrapper">
-        <div id="skills-chart"></div>
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h3>Lenguajes</h3>
-            <p>Python, R, SQL, C++, JavaScript</p>
-          </div>
-          <div class="skill-category">
-            <h3>Herramientas</h3>
-            <p>Power BI, Git, LaTeX, Figma, Excel</p>
-          </div>
-        </div>
-      </div>
-    </section>
+        <section id="about" class="snap-section">
+            <div class="content-wrapper">
+                <h2 class="section-title">Habilidades & Enfoque</h2>
+                <div class="bento-grid">
+                    <article class="bento-card span-2">
+                        <h3><i class="fas fa-brain"></i> Perfil</h3>
+                        <p>Estudiante de 7mo ciclo. Orientado en desarrollar modelos predictivos, visualización de datos y arquitecturas de Machine Learning (CNN, RNN).</p>
+                    </article>
+                    
+                    <article class="bento-card span-2 chart-container">
+                        <h3>Stack Tecnológico</h3>
+                        <div id="skills-chart" aria-label="Gráfico de habilidades técnicas"></div>
+                    </article>
 
-    <section id="projects" class="section">
-      <h2 class="section-title">Proyectos Destacados</h2>
-      <div class="grid">
-        <div class="card">
-          <div class="card-tag">Publicación IAC</div>
-          <h3>Space Debris Detection</h3>
-          <p>Modelos híbridos CNN-RNN para detección de basura espacial presentado en Sydney, Australia.</p>
-          <a href="https://doi.org/10.52202/083079-0146" class="btn-small">Leer más</a>
-        </div>
-        <div class="card">
-          <div class="card-tag">Datathon</div>
-          <h3>Modelos Predictivos SIS</h3>
-          <p>Dashboards y predicción de datos para el Seguro Integral de Salud usando IA.</p>
-        </div>
-      </div>
-    </section>
-  </main>
+                    <article class="bento-card">
+                        <h3><i class="fas fa-toolbox"></i> Herramientas</h3>
+                        <ul class="tag-list">
+                            <li>Git</li><li>Power BI</li><li>LaTeX</li><li>SQL</li><li>Figma</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-  <footer class="footer">
-    <p>&copy; 2026 Cristhian Saico Merma | <span id="year"></span></p>
-  </footer>
+        <section id="projects" class="snap-section">
+            <div class="content-wrapper">
+                <h2 class="section-title">Proyectos</h2>
+                <div class="projects-grid">
+                    <article class="project-card featured">
+                        <div class="project-header">
+                            <span class="badge">IAC Sydney 2025</span>
+                            <h3>Space Debris Detection</h3>
+                        </div>
+                        <p>Desarrollo de un enfoque híbrido de redes neuronales (CNN y RNN) para la detección y clasificación de basura espacial.</p>
+                        <a href="https://doi.org/10.52202/083079-0146" target="_blank" class="link-arrow">Ver Publicación Científica <i class="fas fa-arrow-right"></i></a>
+                    </article>
 
-  <script src="main.js"></script>
+                    <article class="project-card">
+                        <div class="project-header">
+                            <span class="badge">Datathon 2024</span>
+                            <h3>IA Predictiva - SIS</h3>
+                        </div>
+                        <p>Diseño de modelos predictivos y dashboards para optimizar la gestión de datos en salud a nivel nacional.</p>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-header">
+                            <span class="badge">Ministerio de Trabajo</span>
+                            <h3>Análisis Laboral</h3>
+                        </div>
+                        <p>Soluciones basadas en análisis predictivo y visualización de datos abiertos del sector empleo.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
 </body>
 </html>
